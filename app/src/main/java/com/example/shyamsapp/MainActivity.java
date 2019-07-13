@@ -1,5 +1,6 @@
 package com.example.shyamsapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
         toastButton.setOnClickListener( new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Button pressed",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MainActivity.this,"Button pressed",Toast.LENGTH_SHORT).show();
+                Intent nextPage = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(nextPage);
             }
         });
     }
